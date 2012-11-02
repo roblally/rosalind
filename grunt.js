@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-coffee');
     grunt.loadNpmTasks('grunt-coffeelint');
 
-    grunt.loadNpmTasks('grunt-jasmine-node');
+    grunt.loadNpmTasks('grunt-mocha-test');
 
     // grunt.registerTask('default', 'jasmine_node');
     grunt.initConfig({
@@ -28,12 +28,13 @@ module.exports = function(grunt) {
         coffeelint: {
             app: ['lib/*.coffee', 'spec/*.coffee']
         },
-
-        jasmine_node: {
-            spec: "./spec",
-            projectRoot: ".",
-            requirejs: false,
-            forceExit: true
+        mochaTest: {
+            files: ['spec/*.spec.js']
+        },
+        mochaTestConfig: {
+            options: {
+                reporter: 'spec'
+            }
         }
     });
 };
