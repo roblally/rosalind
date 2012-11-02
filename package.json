@@ -1,0 +1,32 @@
+{
+    "name": "rosalind",
+
+    "preferGlobal": "false",
+
+    "author": "Rob Lally rob@robertlally.com",
+
+    "version": "0.0.1",
+
+    "private": true,
+
+    "dependencies": {
+        "underscore": "1.4.2"
+    },
+
+    "devDependencies": {
+        "coffee-script": "1.4.0",
+        "grunt": "0.3.17",
+        "grunt-contrib-coffee": "0.3.2",
+        "grunt-contrib-clean": "0.3.1",
+        "grunt-coffeelint": "0.0.3",
+        "supervisor": "0.5.0",
+        "jasmine-node":"1.0.26",
+        "grunt-jasmine-node":"0.0.2"
+    },
+
+    "analyse": true,
+
+    "engines": {
+        "node": ">=0.8.14"
+    }
+}
