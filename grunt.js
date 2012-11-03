@@ -19,8 +19,14 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            files: ['lib/*.coffee', 'spec/*.coffee'],
-            tasks: 'coffee'
+            compile: {
+                files: ['lib/*.coffee', 'spec/*.coffee'],
+                tasks: 'coffee'
+            },
+            specs: {
+                files: ['lib/*.js', 'spec/*.js'],
+                tasks: 'mochaTest'
+            }
         },
 
         clean: ['lib/*.js', 'spec/*.js'],
